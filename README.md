@@ -5,3 +5,7 @@
 <hr></hr>
 
 - [x] Work towards assessment one unit testing which tests state cinema's pricing functions for vulnerabilities
+
+Please find testing schedule documentation under "MatthewBurton-Testing-schedule-sdv502.docx"
+
+Thanks!
