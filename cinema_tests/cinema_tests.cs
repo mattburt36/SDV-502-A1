@@ -24,6 +24,7 @@ namespace CinemaFunctions.Test
 
         //Test to run, accepts expected result, quantity of ticket, type of customer, the day and time 
         [Test]
+        //Test case for adults before 5 
         public void Adult_before_5_Check(decimal expected, int ticket_quantity, string customer_type, string day, decimal time)
         {
             //Act 
@@ -54,6 +55,7 @@ namespace CinemaFunctions.Test
         [TestCase(-1, 0, "", "saturday", 7)]
         //----------------------------------------------
         [Test]
+        //Test case for adults after 5 
         public void Adult_after_5_Check(decimal expected, int ticket_quantity, string customer_type, string day, decimal time)
         {
             //Act 
@@ -85,6 +87,7 @@ namespace CinemaFunctions.Test
         [TestCase(-1, 0, "", "saturday")]
         //----------------------------------------------
         [Test]
+        //Test case for adults on tuesday 
         public void Adult_on_tuesday_check(decimal expected, int ticket_quantity, string customer_type, string day)
         {
             //Act 
@@ -114,6 +117,7 @@ namespace CinemaFunctions.Test
         [TestCase(-1, 0, "")]
         //----------------------------------------------
         [Test]
+        //Test case for children after 16
         public void Child_Under_16_check(decimal expected, int ticket_quantity, string customer_type)
         {
             //Act 
@@ -143,6 +147,7 @@ namespace CinemaFunctions.Test
         [TestCase(-1, 0, "")]
         //----------------------------------------------
         [Test]
+        //Test case for checking seniors
         public void Senior_check(decimal expected, int ticket_quantity, string customer_type)
         {
             //Act 
@@ -171,6 +176,7 @@ namespace CinemaFunctions.Test
         [TestCase(-1, 0, "")]
         //----------------------------------------------
         [Test]
+        //Test case for checking students 
         public void Student_check(decimal expected, int ticket_quantity, string customer_type)
         {
             //Act 
@@ -195,11 +201,12 @@ namespace CinemaFunctions.Test
         [TestCase(46, 1, 1, 3)]
         [TestCase(46, 1, 2, 2)]
         [TestCase(-1, 1, 3, 1)]
-        [TestCase(92, 2, 4, 4)]
-        [TestCase(-1, 2, 2, 2)]
+        [TestCase(-1, 2, 4, 4)]
+        [TestCase(46, 1, 2, 2)]
         [TestCase(-1, 1, 0, 0)]
         //----------------------------------------------
         [Test]
+        //Test case for checking families 
         public void Family_Pass_check(decimal expected, int ticket_quantity, int adult_quantity, int child_quantity)
         {
             //Act 
@@ -230,7 +237,8 @@ namespace CinemaFunctions.Test
         [TestCase(-1, 0, "", "thursday")]
         //----------------------------------------------
         [Test]
-        public void Chick_Flick_Thrusday_check(decimal expected, int ticket_quantity, string customer_type, string day)
+        //Test case for checking chick flick thursday 
+        public void Chick_Flick_Thursday_check(decimal expected, int ticket_quantity, string customer_type, string day)
         {
             //Act 
             decimal cost = _app.Chick_Flick_Thursday(ticket_quantity, customer_type, day);
@@ -259,6 +267,7 @@ namespace CinemaFunctions.Test
         //----------------------------------------------
 
         [Test]
+        //Test case for checking kids and carers
         public void Kids_Carers_check(decimal expected, int ticket_quantity, string day, bool is_holiday)
         {
             //Act 
